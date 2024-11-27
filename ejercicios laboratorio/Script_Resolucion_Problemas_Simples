@@ -1,0 +1,39 @@
+# Simular una calculadora básica
+def calculadora():
+    operacion = input("Elige una operación (+, -, *, /): ")
+    num1 = float(input("Introduce el primer número: "))
+    num2 = float(input("Introduce el segundo número: "))
+    
+    if operacion == '+':
+        print("Resultado:", num1 + num2)
+    elif operacion == '-':
+        print("Resultado:", num1 - num2)
+    elif operacion == '*':
+        print("Resultado:", num1 * num2)
+    elif operacion == '/':
+        print("Resultado:", num1 / num2)
+    else:
+        print("Operación no válida")
+
+calculadora()
+
+# Crear un juego de adivinanza
+import random
+
+def juego_adivinanza():
+    numero_secreto = random.randint(1, 100)
+    intentos = 0
+    
+    while True:
+        intento = int(input("Adivina el número (entre 1 y 100): "))
+        intentos += 1
+        
+        if intento < numero_secreto:
+            print("Mayor")
+        elif intento > numero_secreto:
+            print("Menor")
+        else:
+            print(f"¡Correcto! Adivinaste el número en {intentos} intentos.")
+            break
+
+juego_adivinanza()
